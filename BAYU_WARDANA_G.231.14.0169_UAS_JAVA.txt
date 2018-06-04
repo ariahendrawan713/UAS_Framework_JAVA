@@ -1,0 +1,8 @@
+Pada file HelloWorld.java
+pada bagian "return new ModelAndView("welcome","message",messages);" pada variabel "messages" tidak akan dikenali dan di tampilkan pada welcome.jsp karena penamaan variabel nya berbeda harus ganti dari "messages" menjadi "message" tanpa penambahan "s"
+
+Pada file my-spring-servlet.xml
+pada bagian "<context.component-scan base-package="com.tobuku" />" pada package "com.tobuku" ini tidak akan bisa dieksekusi dari file yang dituju untuk di proses oleh controller maka harus di ganti dari "com.tobuku" menjadi "com.tobuku.controller"
+
+Pada file web.xml
+Pada bagian "<servlet-name>myspring</servlet-name>" pada name "myspring" tidak akan di kenali oleh sebuah servlet agar bisa di kenali oleh servlet harus di ganti penamaan nya dari "myspring" menjadi "my-spring"
