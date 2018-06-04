@@ -18,7 +18,7 @@
         <load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-        <servlet-name>myspring</servlet-name>
+        <servlet-name>my-spring</servlet-name>
 		<url-pattern>*.html</url-pattern>
         <url-pattern>*.anything</url-pattern>
 	</servlet-mapping>
