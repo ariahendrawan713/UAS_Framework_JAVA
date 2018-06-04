@@ -12,7 +12,7 @@ public class HelloWorld {
 		String message = "<br><div style='text-align:center;'>"
 				+ "<h3>&lt;&lt;&lt; Ola, welcome to the Spring MVC World &gt;&gt;&gt;" 
 				+ "</h3><p>This message comes from <b>HelloWorld.java</b></div>";
-		return new ModelAndView("welcome", "message", messages); 
+		return new ModelAndView("welcome", "message", message); 
 		//Open the welcome.jsp and pass the message
 	}
 }

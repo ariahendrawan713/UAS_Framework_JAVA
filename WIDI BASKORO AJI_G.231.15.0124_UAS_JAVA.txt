@@ -1,0 +1,10 @@
+1. my-spring-servlet.xml
+Pada bagian base-package="com.tobuku" diganti dengan "com.tobuku.controller". Karena pada bean yang terdapat di file ini memanggil file .jsp 
+di folder /WEB-INF/jsp/ yang mana terdapat variabel $message yang berasal dari file HelloWorld.java yang berada di package Controller.
+
+2. web.xml
+Pada bagian servlet-name="myspring" diganti dengan "my-spring" menyesuaikan nama file servlet yang dibuat.
+
+3. HelloWorld.java
+Pada return new ModelAndView("welcome", "message", messages); diganti dengan return new ModelAndView("welcome", "message", message);
+Karena variabel yang dibuat sebelumnya diberi nama message, bukan messages.
