@@ -1,0 +1,36 @@
+1.)	Dalam file helloworld.java
+return new ModelAndView("welcome", "message", messages);
+yang benar adalah penulisan messages di ubah menjadi message jadu:
+return new ModelAndView("welcome", "message", message);
+2.)	Dalam script my-spring-servel.xml
+<context:component-scan base-package="com.tobuku" />
+Ada penambahan “.controller” sehinga menjadi:
+<context:component-scan base-package="com.tobuku.controller" />
+3.)	Dalam script my-spring-servel.xml
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+<property name="prefix" value="/WEB-INF/jsp/" />  
+<property name="suffix" value=".xml" />  
+Perubahan “.xml” menjadi “.jsp” sehinga menjadi:
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+<property name="prefix" value="/WEB-INF/jsp/" />  
+ <property name="suffix" value=".jsp" />  
+4.)	Dalam script pom.xml
+hapus script
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+</dependency>          
+5.)	Dalam script web.xml
+<servlet-mapping>
+ <servlet-name>myspring</servlet-name>
+<url-pattern>*.html</url-pattern>
+ <url-pattern>*.anything</url-pattern>
+</servlet-mapping>
+Perubahan “myspring” menjadi “my-spring” sehinga menjadi:
+servlet-mapping>
+ <servlet-name>my-spring</servlet-name>
+<url-pattern>*.html</url-pattern>
+ <url-pattern>*.anything</url-pattern>
+</servlet-mapping>
