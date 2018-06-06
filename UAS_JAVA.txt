@@ -1,0 +1,45 @@
+NAMA	: DEWI TRI WULANSARI
+NIM		: G.231.15.0099
+UAS PEMROGRAMAN FRAMEWORK JAVA
+1.	Pada file helloworld.java
+
+return new ModelAndView("welcome", "message", messages);
+
+yg benar adalah:
+
+return new ModelAndView("welcome", "message", message);
+
+2.	Di dalam script my-spring-servel.xml
+script yg salah :
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+<property name="prefix" value="/WEB-INF/jsp/" />  
+<property name="suffix" value=".xml" />  
+
+pembenaran scriptnya :
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+<property name="prefix" value="/WEB-INF/jsp/" />  
+<property name="suffix" value=".jsp" /> 
+ 
+Kesalahan di script controller
+
+<context:component-scan base-package="com.tobuku" />
+penulisannya kurang script ".controller" jadi yang benar adalah
+<context:component-scan base-package="com.tobuku.controller" />
+
+4.	Di dalam script pom.xml
+hapus script
+
+javax.servlet javax.servlet-api 3.1.0 provided
+
+5.	Pada file web.xml
+kurang penulisan "-" dalam servlet name
+pada script
+myspring
+.html
+.anything
+Pembenarannya
+my-spring
+.html
+.anything
+ 
