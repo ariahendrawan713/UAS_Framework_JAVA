@@ -1,0 +1,47 @@
+1.kesalahan pada coding di helloworld.java
+
+	- return new ModelAndView("welcome", "message", messages);
+	
+	- pembenaran : return new ModelAndView("welcome", "message", message);
+
+2. kesalahan coding di my-spring-servel.xml
+
+ - script yang salah
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+	<property name="prefix" value="/WEB-INF/jsp/" />  
+	<property name="suffix" value=".xml" />  
+
+ - script yang benar
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+	<property name="prefix" value="/WEB-INF/jsp/" />  
+	<property name="suffix" value=".jsp" />  
+
+ - kesalahan di script controller
+
+	<context:component-scan base-package="com.tobuku" />
+
+	penulisan kurang .controller jadi yang benar
+	<context:component-scan base-package="com.tobuku.controller" />
+
+
+3.pom.xml
+
+	coding tidak sesuai dengan yang ada di mvn repository , seharusnya seperti dibawah ini
+
+	javax.servlet javax.servlet-api 3.1.0 provided
+
+
+4.web.xml
+	penulisan servlet name salah , kurang tanda " - " didalam myspring
+
+	-script awal
+	  myspring
+	  .html
+	  .anything
+
+	- script sesudah dibenarkan
+	  my-spring
+  	  .html
+	  .anything
