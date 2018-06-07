@@ -1,0 +1,47 @@
+1. File helloworld.java
+   return new ModelAndView("welcome", "message", messages); 
+
+   Koreksi :
+   return new ModelAndView("welcome", "message", message);
+
+2. Script my-spring-servel.xml
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+   <property name="prefix" value="/WEB-INF/jsp/" />  
+	<property name="suffix" value=".xml" />  
+   </bean>  
+
+   Koreksi :
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+   <property name="prefix" value="/WEB-INF/jsp/" />  
+   	 <property name="suffix" value=".jsp" />  
+   </bean>  
+
+   Script my-spring-servel.xml
+   <context:component-scan base-package="com.tobuku" />
+
+   Koreksi : ".controller"
+   <context:component-scan base-package="com.tobuku.controller" />
+
+4. Script pom.xml
+
+   Koreksi :
+   hapus script
+   <dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.1.0</version>
+		<scope>provided</scope>
+   </dependency> 
+
+5. File web.xml
+   kurang penulisan "-" dalam servlet name
+
+   Script :
+   <servlet-name>myspring</servlet-name>
+	<url-pattern>*.html</url-pattern>
+	<url-pattern>*.anything</url-pattern> 
+
+   Koreksi :
+   <servlet-name>my-spring</servlet-name>
+	<url-pattern>*.html</url-pattern>
+	<url-pattern>*.anything</url-pattern> 
