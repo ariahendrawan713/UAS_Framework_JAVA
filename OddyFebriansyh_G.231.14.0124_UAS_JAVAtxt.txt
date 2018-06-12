@@ -1,0 +1,5 @@
+1. dalam file (my-spring-sevlet.xml) ada code yang salah pada (<property name="suffix" value=".xml" /> ) kemudian di uba menjadi (<property name="suffix" value=".jsp" /> ).
+
+2. selanjutnya pada file  web.xml ada code <servlet-name>myspring</servlet-name> seharusnya ada penambahan ( - ) menjadi         <servlet-name>my-spring</servlet-name>
+
+3. di file HelloWorld.java file ( return new ModelAndView("welcome", "message", messages); ) dalam text "messages" seharusnya tidak ada penambahan " s " menjadi ( return new ModelAndView("welcome", "message", message); )
